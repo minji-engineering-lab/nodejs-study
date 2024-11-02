@@ -13,7 +13,8 @@ phases:
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
   post_build:
     commands:
-      - echo Pushing Docker image to ECR...
+      - echo Pushing Docker image to Amazon ECR...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Updating Lambda function...
       - aws lambda update-function-code --function-name simpleLambda --image-uri $REPOSITORY_URI:$IMAGE_TAG
+  

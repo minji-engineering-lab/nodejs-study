@@ -10,4 +10,4 @@ COPY . .
 
 RUN npm run build
 
-CMD ["src/app.handler"]
+CMD ["node", "dist/app.js"]

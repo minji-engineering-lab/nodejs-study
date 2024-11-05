@@ -1,7 +1,8 @@
-export const handler = async (event: any, ) => {
-    console.log('Hello from Lambda')
+export const handler = async () => {
+    console.log('Hello from Lambda! This will run every day at midnight.');
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'hello' })
+        body: JSON.stringify({ message: 'hello' }),
     };
-};
+  };
+  

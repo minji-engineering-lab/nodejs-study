@@ -6,7 +6,7 @@
       "strict": true,
       "esModuleInterop": true
     },
-    "include": ["src/app.handler"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules"]
 }
   

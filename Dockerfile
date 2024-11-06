@@ -10,4 +10,5 @@ COPY . .
 
 RUN npm run build
 
-CMD ["node", "dist/app.js"]
+ENTRYPOINT ["/lambda-entrypoint.sh", "app.handler"] 
+CMD [ "app.handler" ]
